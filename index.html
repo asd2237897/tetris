@@ -15,7 +15,13 @@
             /* border: 1px solid #000; */
             overflow: hidden;
         }
-
+        .pxDiv{
+            margin: 1px;
+        }
+        .bigDiv{
+            position: relative;
+            background: rgba(66, 66, 66, 0.5);
+        }
         .right {
             float: left;
             width: 200px;
@@ -47,7 +53,7 @@
         }
 
         .presentation {
-            margin-top: 50px;
+            margin-top: 40px;
             color: firebrick;
         }
 
@@ -58,9 +64,6 @@
 
         .content {
             float: left;
-            width: 300px;
-            height: 600px;
-            background: rgba(66, 66, 66, 0.5);
         }
         .top{
             padding: 15px;
@@ -101,10 +104,18 @@
                     <p>←：左移</p>  
                     <p>→：右移</p>
                     <p>↓：加速</p>
+                    <p>空格:秒下</p>
                 </div>
             </div>
         </div>
     </div>
 </body>
-
+<script src="./js/Game.js"></script>
+<script src="./js/form.js"></script>
+<script src="./js/jquery-1.12.4.js"></script>
+<script>
+    var map = document.querySelector('.content')
+    var game = new Game(30,10,20,map)
+    game.show()
+</script>
 </html>

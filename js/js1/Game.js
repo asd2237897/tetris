@@ -139,6 +139,8 @@ function GameFrame(unit,row,col)
     }
     //绘制图形
     var smallarr = this.frame.arr[this.frame.next].split(",");
+    console.log(smallarr);
+    
     for (var i = 0; i < 8; i += 2) {
     var drawdiv = document.createElement("div");
     drawdiv.className = "drawdiv";
