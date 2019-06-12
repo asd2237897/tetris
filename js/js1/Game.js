@@ -35,6 +35,8 @@ function GameFrame(unit,row,col)
   //初始化容器div
   this.init = function()
   {
+    console.log(this.arr);
+    
     //创建div
     var div = document.createElement("div");
     //设置div的宽度
@@ -140,7 +142,6 @@ function GameFrame(unit,row,col)
     //绘制图形
     var smallarr = this.frame.arr[this.frame.next].split(",");
     console.log(smallarr);
-    
     for (var i = 0; i < 8; i += 2) {
     var drawdiv = document.createElement("div");
     drawdiv.className = "drawdiv";
@@ -150,6 +151,7 @@ function GameFrame(unit,row,col)
     drawdiv.style.top = (((smallarr[i] - 0) * this.frame.unit)+18) + "px";
     drawdiv.style.left = (((smallarr[i + 1] - 0) * this.frame.unit)+18) + "px";
     document.getElementById("nextform").appendChild(drawdiv);
+    
     }
   }
 }
