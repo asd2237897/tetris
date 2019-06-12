@@ -90,6 +90,8 @@ function GameFrame(unit,row,col)
   }
   function Start()
   {
+    // console.log(this.frame);
+    
     //将next值传给now
     this.frame.now=this.frame.next;
     this.frame.nowcolor=this.frame.nextcolor;

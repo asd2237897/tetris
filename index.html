@@ -22,6 +22,14 @@
             background-color: cadetblue;
             position: absolute;
         }
+        .nextDiv{
+            background-color: chartreuse;
+            margin: 1px;
+            border: 1px solid rgba(66, 66, 66, 0.5);
+            position: absolute;
+            left: 0px;
+            top: 0px
+        }
 
         .bigDiv {
             position: relative;
@@ -30,7 +38,7 @@
 
         .right {
             float: left;
-            width: 200px;
+            width: 230px;
             height: 600px;
             border: 1px solid #666;
             font-size: 20px;
@@ -78,10 +86,11 @@
 
         .nextform {
             margin: 10px auto;
-            width: 150px;
-            height: 150px;
+            width: 180px;
+            height: 180px;
             background: rgba(66, 66, 66, 0.5);
             margin-bottom: 20px;
+            position: relative;
         }
     </style>
 </head>
@@ -124,7 +133,7 @@
 <script>
     var map = document.querySelector('.content')
     var smap = document.querySelector('.nextform')
-    var game = new Game(30, 10, 20, map,smap)
+    var game = new Game(map,smap)
     game.init()
 </script>
 
