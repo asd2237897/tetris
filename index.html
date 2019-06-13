@@ -19,16 +19,27 @@
         .pxDiv {
             float: left;
             margin: 1px;
-            background-color: cadetblue;
+            /* background-color: rgba(66, 66, 66, 0.7); */
             position: absolute;
         }
-        .nextDiv{
-            background-color: chartreuse;
+
+        .nextDiv {
+            /* background-color: chartreuse; */
             margin: 1px;
             border: 1px solid rgba(66, 66, 66, 0.5);
+            box-sizing: border-box;
             position: absolute;
             left: 0px;
             top: 0px
+        }
+
+        .nextform {
+            margin: 10px auto;
+            width: 180px;
+            height: 180px;
+            background: rgba(66, 66, 66, 0.5);
+            margin-bottom: 20px;
+            position: relative;
         }
 
         .bigDiv {
@@ -83,15 +94,6 @@
         .top {
             padding: 15px;
         }
-
-        .nextform {
-            margin: 10px auto;
-            width: 180px;
-            height: 180px;
-            background: rgba(66, 66, 66, 0.5);
-            margin-bottom: 20px;
-            position: relative;
-        }
     </style>
 </head>
 
@@ -128,13 +130,31 @@
     </div>
 </body>
 <script src="./js/Game.js"></script>
-<script src="./js/form.js"></script>
+<script src="./js/nowform.js"></script>
 <script src="./js/jquery-1.12.4.js"></script>
 <script>
-    var map = document.querySelector('.content')
-    var smap = document.querySelector('.nextform')
-    var game = new Game(map,smap)
-    game.init()
+    var map = document.querySelector('.content');
+    var smap = document.querySelector('.nextform');
+    var game = new Game(map, smap);
+    game.init();
+    //按上下左右实现对应功能
+    document.body.addEventListener('keydown', function (e) {
+        switch (e.keyCode) {
+            case 37:
+                console.log(1);
+                game.nowForm.moveLeft();
+                break;
+            case 39:
+                game.nowForm.moveRight();
+                break;
+            case 38:
+                game.nowForm.moveLeftTop();
+                break;
+            case 40:
+                game.nowForm.moveBottom();
+                break;
+        }
+    });
 </script>
 
 </html>

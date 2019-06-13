@@ -90,7 +90,7 @@ function GameFrame(unit,row,col)
   }
   function Start()
   {
-    // console.log(this.frame);
+    console.log(this.frame);
     
     //将next值传给now
     this.frame.now=this.frame.next;
