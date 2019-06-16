@@ -32,7 +32,7 @@
         //记录所在位置是否有div
         this.place = [];
         //当前图形构造函数
-        this.nowForm = new NowForm(this.game)
+        // this.
     };
     w.Game = Game;
     //初始化游戏
@@ -66,8 +66,9 @@
         //保存下一个图形的下标和颜色到当前
         this.now = this.next;
         this.nowColor = this.nextColor
+        this.nowForm = new NowForm()
         //引入当前图形构造函数并展示
-        this.nowForm.show(this.arrForm, this.now, this.pixel, this.nowColor)
+        this.nowForm.show()
         //刷新下一个图形下标和颜色
         this.next = Math.floor(Math.random() * this.arrForm.length);
         this.nextColor = this.arrColor[Math.floor(Math.random() * this.arrColor.length)];

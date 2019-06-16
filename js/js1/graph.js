@@ -15,6 +15,7 @@ function Graph(frame) {
     //初始化小图形的方法
     this.init = function(rand,color) {
         //计算图形其实坐标的单位
+        
         var startleft = (this.parentFrame.row - 4) / 2;
         this.x = startleft;
         //随机生成图形数组下标
@@ -105,9 +106,10 @@ function Graph(frame) {
           this.x -= 1;
         }
       }
-      for (var i = 0; i < this.divs.length; i++) {
+      for (var i = 0; i < this. divs.length; i++) {
         //根据公式改变每个div的相对偏移量，2个一改
         var temp = this.zb[i * 2]
+        console.log(temp);
         this.zb[i * 2] = this.zb[i * 2 + 1];
         this.zb[i * 2 + 1] = 3 - temp;
         //根据改变后的偏移量计算图形的当前left和top
