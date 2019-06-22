@@ -137,7 +137,6 @@
     var smap = document.querySelector('.nextform');
     var game = new Game(map, smap);
     game.init();
-    
     //按上下左右实现对应功能
     document.body.addEventListener('keydown', function (e) {
         switch (e.keyCode) {
@@ -148,9 +147,12 @@
                 game.nowForm.moveRight();
                 break;
             case 38:
-                game.nowForm.moveTop();
+                game.nowForm.moveUp();
                 break;
             case 40:
+                game.nowForm.moveDown();
+                break;
+            case 32:
                 game.nowForm.moveBottom();
                 break;
         }

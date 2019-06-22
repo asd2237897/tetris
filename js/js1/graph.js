@@ -106,6 +106,7 @@ function Graph(frame) {
           this.x -= 1;
         }
       }
+      console.log(this.zb);
       for (var i = 0; i < this. divs.length; i++) {
         //根据公式改变每个div的相对偏移量，2个一改
         var temp = this.zb[i * 2]

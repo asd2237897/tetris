@@ -26,13 +26,13 @@
         //记录下一个形状的颜色
         this.nextColor;
         //吧7种形状的相对坐标保存在数组里,J L S Z I T O
-        this.arrForm = ["2,0,2,1,2,2,1,2", "1,0,1,1,1,2,2,2", "1,1,1,2,2,0,2,1", "1,0,1,1,2,1,2,2", "0,1,1,1,2,1,3,1", "1,1,2,0,2,1,2,2", "1,1,1,2,2,1,2,2"];
+        this.arrForm = ["1,2,2,0,2,1,2,2", "1,0,1,1,1,2,2,2", "1,1,1,2,2,0,2,1", "1,0,1,1,2,1,2,2", "0,1,1,1,2,1,3,1", "1,1,2,0,2,1,2,2", "1,1,1,2,2,1,2,2"];
         //彩虹7色
         this.arrColor = ["#FF0000", "#FF7F00", "#FFFF00", "#00FF00", "#00FFFF", "#0000FF", "#8B00FF"]
         //记录所在位置是否有div
         this.place = [];
-        //当前图形构造函数
-        // this.
+        //当前图形的计时器
+        this.setInterval;
     };
     w.Game = Game;
     //初始化游戏
@@ -69,6 +69,8 @@
         this.nowForm = new NowForm()
         //引入当前图形构造函数并展示
         this.nowForm.show()
+        //自动下落
+        // setInterval(function(){this.nowForm.moveDown()}.bind(this),200)
         //刷新下一个图形下标和颜色
         this.next = Math.floor(Math.random() * this.arrForm.length);
         this.nextColor = this.arrColor[Math.floor(Math.random() * this.arrColor.length)];

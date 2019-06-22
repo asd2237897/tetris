@@ -103,7 +103,7 @@ function GameFrame(unit,row,col)
     this.frame.nextcolor=this.frame.color[Math.floor(Math.random() * this.frame.color.length)];
     draw();
     //调用定时器下落
-    this.frame.intervalid = setInterval(autoMoveDown,this.frame.speed);
+    // this.frame.intervalid = setInterval(autoMoveDown,this.frame.speed);
     //判断游戏是否结束
     if (this.frame.samlldiv.movedown()){
         clearInterval(this.frame.intervalid);
